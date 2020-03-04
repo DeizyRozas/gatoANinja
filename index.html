@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>De ninja a gato</title>
+</head>
+<body>
+    
+    <div class="contenedor">
+        <img class="cat" src="img/cat0.png" data-src="img/ninja0.png">
+        <img class="cat" src="img/cat1.png" data-src="img/ninja1.png">
+        <img class="cat" src="img/cat2.png" data-src="img/ninja2.png">
+        <img class="cat" src="img/cat3.png"  data-src="img/ninja3.png">
+        <img class="cat" src="img/cat4.png" data-src="img/ninja4.png">
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+    $('img').hover(function() {
+        const source = $(this).attr('src');
+        const xtemp = $(this).attr('data-src');
+         $(this).attr('src', xtemp);
+         $(this).attr('data-src',source);
+    });
+        
+    </script>
+</body>
+</html>
